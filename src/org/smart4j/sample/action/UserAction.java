@@ -23,12 +23,12 @@ public class UserAction {
     public View index() {
         List<User> userList = userService.findUserList();
         DataContext.Request.put("userList", userList);
-        return new View("user.jsp");
+        return new View("system/user/list.jsp");
     }
 
     @Request.Get("/user/create")
     public View create() {
-        return new View("user_create.jsp");
+    	return new View("system/user/create.jsp");
     }
 
     @Request.Post("/user/create")
@@ -42,7 +42,7 @@ public class UserAction {
     public View edit(long id) {
         User user = userService.findUser(id);
         DataContext.Request.put("user", user);
-        return new View("user_edit.jsp");
+        return new View("system/user/edit.jsp");
     }
 
     @Request.Put("/user/{id}")

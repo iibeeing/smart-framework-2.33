@@ -16,10 +16,10 @@ import org.smart4j.framework.ds.DataSourceFactory;
 import org.smart4j.framework.util.ClassUtil;
 
 /**
- * 封装数据库相关操作
- *
- * @author huangyong
- * @since 1.0
+@ClassName: DatabaseHelper
+@Description: 封装数据库相关操作
+@author BEE 
+@date 2016-4-20 上午10:05:36
  */
 public class DatabaseHelper {
 
@@ -138,7 +138,8 @@ public class DatabaseHelper {
     /**
      * 初始化 SQL 脚本
      */
-    public static void initSQL(String sqlPath) {
+    @SuppressWarnings("unchecked")
+	public static void initSQL(String sqlPath) {
         try {
             File sqlFile = new File(ClassUtil.getClassPath() + sqlPath);
             List<String> sqlList = FileUtils.readLines(sqlFile);

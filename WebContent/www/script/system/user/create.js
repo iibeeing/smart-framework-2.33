@@ -3,18 +3,18 @@ $(function() {
 
     $('#user_create_form').ajaxForm({
         type: 'post',
-        url: BASE + '/user/save',
+        url: BASE + '/user/create',
         beforeSubmit: function() {
             return validator.required('user_create_form');
         },
         success: function(result) {
             if (result.success) {
-                location.href = BASE + '/user';
+                location.href = BASE + '/users';
             }
         }
     });
 
     $('#cancel').click(function() {
-        location.href = BASE + '/user';
+        location.href = BASE + '/users';
     });
 });
