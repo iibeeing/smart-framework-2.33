@@ -12,6 +12,6 @@ public class LogServiceImpl implements ILogService {
 
 	@Override
 	public List<Log> findlist() {
-		return DataSet.selectListWithSort(Log.class,"operateTime");
+		return DataSet.selectListWithSort(Log.class,"operateTime desc");
 	}
 }

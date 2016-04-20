@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Random;
@@ -314,5 +315,22 @@ public class WebUtil {
     public boolean isIE(HttpServletRequest request) {
         String agent = request.getHeader("User-Agent");
         return agent != null && agent.contains("MSIE");
+    }
+    
+    public static Map<String, String> createQueryMap(String queryString)
+    {
+      Map<String, String> queryMap = new HashMap<String, String>();
+      if (StringUtil.isNotEmpty(queryString)) {
+        String[] queryArray = queryString.split(";");
+        if (ArrayUtil.isNotEmpty(queryArray)) {
+          for (String query : queryArray) {
+            String[] fieldArray = query.split(":");
+            if ((ArrayUtil.isNotEmpty(fieldArray)) && (fieldArray.length == 2)) {
+              queryMap.put(fieldArray[0], fieldArray[1]);
+            }
+          }
+        }
+      }
+      return queryMap;
     }
 }

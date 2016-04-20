@@ -62,7 +62,7 @@
 </div>
 
 <div id="footer">
-    <div id="copyright">Copyright @ 2013</div>
+    <div id="copyright">Copyright @ 2016</div>
 </div>
 
 <script type="text/javascript" src="${BASE}/www/asset/lib/jquery/jquery.min.js"></script>
