@@ -1,6 +1,8 @@
-package org.smart4j.framework.entity;
+package org.smart4j.sample.entity;
 
 import java.util.Date;
+
+import org.smart4j.framework.orm.annotation.Entity;
 
 /**
 @ClassName: Log
@@ -8,11 +10,12 @@ import java.util.Date;
 @author BEE 
 @date 2016-4-19 下午2:56:35
  */
+@Entity
 public class Log {
 
 	private String id;
 	private String statement;
-	private Date operateTime;
+	private String operateTime;
 	private int type;
 	private String userid;
 	public String getId() {
@@ -20,12 +23,6 @@ public class Log {
 	}
 	public void setId(String id) {
 		this.id = id;
-	}
-	public Date getOperateTime() {
-		return operateTime;
-	}
-	public void setOperateTime(Date operateTime) {
-		this.operateTime = operateTime;
 	}
 	public int getType() {
 		return type;
@@ -44,6 +41,12 @@ public class Log {
 	}
 	public void setStatement(String statement) {
 		this.statement = statement;
+	}
+	public String getOperateTime() {
+		return operateTime;
+	}
+	public void setOperateTime(String operateTime) {
+		this.operateTime = operateTime;
 	}	
 	
 }

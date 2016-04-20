@@ -6,10 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 定义 Entity 类
- *
- * @author huangyong
- * @since 2.3
+@ClassName: Entity
+@Description: 定义 Entity 类
+@author BEE 
+@date 2016-4-20 上午9:37:42
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

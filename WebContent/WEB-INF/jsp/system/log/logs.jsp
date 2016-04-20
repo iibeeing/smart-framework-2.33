@@ -32,6 +32,7 @@
                         <tr>
                             <td>ID</td>
                             <td>语句</td>
+                            <td>操作时间</td>
                             <td>类型</td>
                             <td>操作用户ID</td>
                         </tr>
@@ -44,6 +45,9 @@
                                 </td>
                                 <td>
                                     ${log.statement }
+                                </td>
+                                <td>
+                                    ${log.operateTime }
                                 </td>
                                 <td>
                                     ${log.type }

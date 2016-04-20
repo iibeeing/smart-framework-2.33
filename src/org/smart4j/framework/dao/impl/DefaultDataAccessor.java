@@ -68,7 +68,7 @@ public class DefaultDataAccessor implements DataAccessor {
             throw new RuntimeException(e);
         }
         //String log = LogHelper.generateSelectSQL(entityClass, "id = ?", "", params);
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return result;
     }
 
@@ -86,7 +86,7 @@ public class DefaultDataAccessor implements DataAccessor {
             logger.error("查询出错！", e);
             throw new RuntimeException(e);
         }
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return result;
     }
 
@@ -99,7 +99,7 @@ public class DefaultDataAccessor implements DataAccessor {
             logger.error("查询出错！", e);
             throw new RuntimeException(e);
         }
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return entityMap;
     }
 
@@ -112,7 +112,7 @@ public class DefaultDataAccessor implements DataAccessor {
             logger.error("查询出错！", e);
             throw new RuntimeException(e);
         }
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return array;
     }
 
@@ -125,7 +125,7 @@ public class DefaultDataAccessor implements DataAccessor {
             logger.error("查询出错！", e);
             throw new RuntimeException(e);
         }
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return arrayList;
     }
 
@@ -138,7 +138,7 @@ public class DefaultDataAccessor implements DataAccessor {
             logger.error("查询出错！", e);
             throw new RuntimeException(e);
         }
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return map;
     }
 
@@ -151,7 +151,7 @@ public class DefaultDataAccessor implements DataAccessor {
             logger.error("查询出错！", e);
             throw new RuntimeException(e);
         }
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return fieldMapList;
     }
 
@@ -164,7 +164,7 @@ public class DefaultDataAccessor implements DataAccessor {
             logger.error("查询出错！", e);
             throw new RuntimeException(e);
         }
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return obj;
     }
 
@@ -177,7 +177,7 @@ public class DefaultDataAccessor implements DataAccessor {
             logger.error("查询出错！", e);
             throw new RuntimeException(e);
         }
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return list;
     }
 
@@ -190,7 +190,7 @@ public class DefaultDataAccessor implements DataAccessor {
             logger.error("查询出错！", e);
             throw new RuntimeException(e);
         }
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return map;
     }
 
@@ -203,7 +203,7 @@ public class DefaultDataAccessor implements DataAccessor {
             logger.error("查询出错！", e);
             throw new RuntimeException(e);
         }
-        printSQL(sql,params);
+        //printSQL(sql,params);
         return result;
     }
 
