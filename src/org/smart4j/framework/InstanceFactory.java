@@ -21,10 +21,10 @@ import org.smart4j.framework.util.ObjectUtil;
 import org.smart4j.framework.util.StringUtil;
 
 /**
- * 实例工厂
- *
- * @author huangyong
- * @since 2.3
+@ClassName: InstanceFactory
+@Description: 实例工厂
+@author BEE 
+@date 2016-4-20 下午5:29:52
  */
 public class InstanceFactory {
 

@@ -4,10 +4,10 @@ import java.lang.reflect.Method;
 import java.util.regex.Matcher;
 
 /**
- * 封装 Action 方法相关信息
- *
- * @author huangyong
- * @since 1.0
+@ClassName: Handler
+@Description: 封装 Action 方法相关信息
+@author BEE 
+@date 2016-4-20 下午5:24:38
  */
 public class Handler {
 

@@ -1,10 +1,10 @@
 package org.smart4j.framework.mvc;
 
 /**
- * 处理器映射
- *
- * @author huangyong
- * @since 2.3
+@ClassName: HandlerMapping
+@Description: 处理器映射
+@author BEE 
+@date 2016-4-20 下午5:29:37
  */
 public interface HandlerMapping {
 
