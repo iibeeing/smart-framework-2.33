@@ -12,10 +12,10 @@ import org.smart4j.framework.util.MapUtil;
 import org.smart4j.framework.util.WebUtil;
 
 /**
- * 默认视图解析器
- *
- * @author huangyong
- * @since 2.3
+@ClassName: DefaultViewResolver
+@Description: 默认视图解析器
+@author BEE 
+@date 2016-4-21 上午10:10:10
  */
 public class DefaultViewResolver implements ViewResolver {
 

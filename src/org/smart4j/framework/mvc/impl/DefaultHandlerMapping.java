@@ -10,7 +10,7 @@ import org.smart4j.framework.mvc.Requester;
 
 /**
 @ClassName: DefaultHandlerMapping
-@Description: 默认处理器映射
+@Description: 默认处理器映射(方法路径 和 对应的映射)
 @author BEE 
 @date 2016-4-20 下午5:25:30
  */
@@ -26,7 +26,7 @@ public class DefaultHandlerMapping implements HandlerMapping {
         Map<Requester, Handler> actionMap = ActionHelper.getActionMap();
         //遍历方法
         for (Map.Entry<Requester, Handler> actionEntry : actionMap.entrySet()) {
-            // 从 Requester 中获取 Request 相关属性
+            // 从 Requester 中获取 Request 相关属性，包含了method和路径
             Requester requester = actionEntry.getKey();
             //比如 POST
             String requestMethod = requester.getRequestMethod();

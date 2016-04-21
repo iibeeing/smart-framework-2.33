@@ -3,10 +3,10 @@ package org.smart4j.framework.core.impl.support;
 import java.lang.annotation.Annotation;
 
 /**
- * 用于获取注解类的模板类
- *
- * @author huangyong
- * @since 2.3
+@ClassName: AnnotationClassTemplate
+@Description: 用于获取注解类的模板类
+@author BEE 
+@date 2016-4-21 上午10:27:17
  */
 public abstract class AnnotationClassTemplate extends ClassTemplate {
 

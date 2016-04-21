@@ -28,10 +28,10 @@ import org.smart4j.framework.util.StreamUtil;
 import org.smart4j.framework.util.StringUtil;
 
 /**
- * 封装文件上传相关操作
- *
- * @author huangyong
- * @since 2.1
+@ClassName: UploadHelper
+@Description: 封装文件上传相关操作
+@author BEE 
+@date 2016-4-21 上午10:17:15
  */
 public class UploadHelper {
 

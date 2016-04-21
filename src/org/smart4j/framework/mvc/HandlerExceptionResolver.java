@@ -4,10 +4,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Handler 异常解析器
- *
- * @author huangyong
- * @since 2.3
+@ClassName: HandlerExceptionResolver
+@Description: Handler 异常解析器
+@author BEE 
+@date 2016-4-21 上午10:08:52
  */
 public interface HandlerExceptionResolver {
 

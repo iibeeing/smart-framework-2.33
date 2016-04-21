@@ -13,15 +13,16 @@ import org.smart4j.framework.util.CollectionUtil;
 import org.smart4j.framework.util.StringUtil;
 
 /**
- * 初始化 Action 配置
- *
- * @author huangyong
- * @since 1.0
+@ClassName: ActionHelper
+@Description: 初始化 Action 配置，获取类似<POST,Hander(UserAction.class,/user/create,requestPathMatcher)>,<Put,/user/{id},requestPathMatcher)>的Map
+@author BEE 
+@date 2016-4-21 上午11:35:38
  */
 public class ActionHelper {
 
     /**
      * Action Map（HTTP 请求与 Action 方法的映射）
+     * actionMap 比如有<POST,Hander(UserAction.class,/user/create,requestPathMatcher)>,<Put,/user/{id},requestPathMatcher)>
      */
     private static final Map<Requester, Handler> actionMap = new LinkedHashMap<Requester, Handler>();
 
@@ -51,6 +52,7 @@ public class ActionHelper {
 
     private static void handleActionMethod(Class<?> actionClass, Method actionMethod, Map<Requester, Handler> commonActionMap, Map<Requester, Handler> regexpActionMap) {
         // 判断当前 Action 方法是否带有 Request 注解
+    	//比如路径是@Request.Post("/user/create")
         if (actionMethod.isAnnotationPresent(Request.Get.class)) {
             String requestPath = actionMethod.getAnnotation(Request.Get.class).value();
             putActionMap("GET", requestPath, actionClass, actionMethod, commonActionMap, regexpActionMap);

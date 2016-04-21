@@ -9,10 +9,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 对象操作工具类
- *
- * @author huangyong
- * @since 1.0
+@ClassName: ObjectUtil
+@Description: 对象操作工具类
+@author BEE 
+@date 2016-4-21 上午9:59:57
  */
 public class ObjectUtil {
 

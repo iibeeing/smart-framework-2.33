@@ -2,6 +2,12 @@ package org.smart4j.framework;
 
 import org.smart4j.framework.core.ConfigHelper;
 
+/**
+@ClassName: FrameworkConstant
+@Description: 框架常量，包括配置文件名称及文件路径
+@author BEE 
+@date 2016-4-21 上午9:55:43
+ */
 public interface FrameworkConstant {
 
     String UTF_8 = "UTF-8";

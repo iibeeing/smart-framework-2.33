@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 
 /**
 @ClassName: Handler
-@Description: 封装 Action 方法相关信息
+@Description: 封装 Action 方法相关信息，用于处理某个请求（从代码Action中，找到method()）
 @author BEE 
 @date 2016-4-20 下午5:24:38
  */

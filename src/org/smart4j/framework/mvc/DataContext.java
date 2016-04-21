@@ -11,10 +11,10 @@ import org.smart4j.framework.util.CastUtil;
 import org.smart4j.framework.util.CodecUtil;
 
 /**
- * 数据上下文
- *
- * @author huangyong
- * @since 1.0
+@ClassName: DataContext
+@Description: 数据上下文
+@author BEE 
+@date 2016-4-21 上午10:07:38
  */
 public class DataContext {
 

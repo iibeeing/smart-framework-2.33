@@ -15,10 +15,10 @@ import org.smart4j.framework.util.ClassUtil;
 import org.smart4j.framework.util.StringUtil;
 
 /**
- * 用于获取类的模板类
- *
- * @author huangyong
- * @since 2.3
+@ClassName: ClassTemplate
+@Description: 用于获取类的模板类
+@author BEE 
+@date 2016-4-21 上午10:27:59
  */
 public abstract class ClassTemplate {
 

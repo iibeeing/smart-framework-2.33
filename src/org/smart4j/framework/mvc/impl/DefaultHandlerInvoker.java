@@ -47,6 +47,9 @@ public class DefaultHandlerInvoker implements HandlerInvoker {
         viewResolver.resolveView(request, response, actionMethodResult);
     }
 
+    /**
+     * 获取Action方法中的参数列表
+     */
     public List<Object> createActionMethodParamList(HttpServletRequest request, Handler handler) throws Exception {
         // 定义参数列表
         List<Object> paramList = new ArrayList<Object>();

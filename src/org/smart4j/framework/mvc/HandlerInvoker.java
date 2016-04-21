@@ -4,10 +4,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Handler 调用器
- *
- * @author huangyong
- * @since 2.3
+@ClassName: HandlerInvoker
+@Description: Handler 调用器，就是调用handle中封装的方法，就是运行Action中所请求映射的函数
+@author BEE 
+@date 2016-4-21 上午10:09:04
  */
 public interface HandlerInvoker {
 

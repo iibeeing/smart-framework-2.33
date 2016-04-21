@@ -5,10 +5,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * 类操作工具类
- *
- * @author huangyong
- * @since 1.0
+@ClassName: ClassUtil
+@Description: 类操作工具类
+@author BEE 
+@date 2016-4-21 上午10:00:35
  */
 public class ClassUtil {
 
