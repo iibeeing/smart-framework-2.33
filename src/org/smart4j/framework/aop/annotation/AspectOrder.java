@@ -6,10 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 定义切面顺序
- *
- * @author huangyong
- * @since 1.0
+@ClassName: AspectOrder
+@Description: 定义切面顺序
+@author BEE 
+@date 2016-4-22 下午4:15:28
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

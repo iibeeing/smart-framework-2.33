@@ -3,11 +3,12 @@ package org.smart4j.framework.mvc.bean;
 import org.smart4j.framework.core.bean.BaseBean;
 
 /**
- * 封装返回数据
- *
- * @author huangyong
- * @since 1.0
+@ClassName: Result
+@Description: 封装返回数据
+@author BEE 
+@date 2016-4-22 下午3:30:55
  */
+@SuppressWarnings("serial")
 public class Result extends BaseBean {
 
     private boolean success; // 成功标志

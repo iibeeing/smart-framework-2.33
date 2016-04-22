@@ -11,10 +11,10 @@ import org.smart4j.framework.mvc.annotation.Action;
 import org.smart4j.framework.tx.annotation.Service;
 
 /**
- * 初始化相关 Bean 类
- *
- * @author huangyong
- * @since 1.0
+@ClassName: BeanHelper
+@Description: 初始化相关 Bean 类(带注解类的类)
+@author BEE 
+@date 2016-4-22 下午3:32:55
  */
 public class BeanHelper {
 

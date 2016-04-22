@@ -21,10 +21,10 @@ import org.smart4j.framework.util.MapUtil;
 import org.smart4j.framework.util.WebUtil;
 
 /**
- * 默认 Handler 调用器
- *
- * @author huangyong
- * @since 2.3
+@ClassName: DefaultHandlerInvoker
+@Description: 默认 Handler 调用器
+@author BEE 
+@date 2016-4-22 下午3:32:20
  */
 public class DefaultHandlerInvoker implements HandlerInvoker {
 

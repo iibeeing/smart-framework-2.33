@@ -6,10 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 依赖注入
- *
- * @author huangyong
- * @since 1.0
+@ClassName: Inject
+@Description: 依赖注入
+@author BEE 
+@date 2016-4-22 下午4:13:17
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)

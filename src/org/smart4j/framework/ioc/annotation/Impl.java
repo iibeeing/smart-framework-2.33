@@ -6,10 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 指定接口的实现类
- *
- * @author huangyong
- * @since 1.0
+@ClassName: Impl
+@Description: 指定接口的实现类，建议给一个某个接口实现类该注解，(最好)一定要有，且只能一个
+@author BEE 
+@date 2016-4-22 下午4:00:42
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

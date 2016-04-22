@@ -8,10 +8,10 @@ import org.smart4j.framework.core.impl.support.ClassTemplate;
 import org.smart4j.framework.core.impl.support.SupperClassTemplate;
 
 /**
- * 默认类扫描器
- *
- * @author huangyong
- * @since 2.3
+@ClassName: DefaultClassScanner
+@Description: 默认类扫描器
+@author BEE 
+@date 2016-4-22 下午3:57:04
  */
 public class DefaultClassScanner implements ClassScanner {
 

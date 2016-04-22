@@ -26,10 +26,10 @@ import org.slf4j.LoggerFactory;
 import org.smart4j.framework.FrameworkConstant;
 
 /**
- * Web 操作工具类
- *
- * @author huangyong
- * @since 1.0
+@ClassName: WebUtil
+@Description: Web 操作工具类
+@author BEE 
+@date 2016-4-22 下午3:27:20
  */
 public class WebUtil {
 

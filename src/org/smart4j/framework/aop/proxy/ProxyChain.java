@@ -6,17 +6,22 @@ import java.util.List;
 import net.sf.cglib.proxy.MethodProxy;
 
 /**
- * 代理链
- *
- * @author huangyong
- * @since 2.0
+@ClassName: ProxyChain
+@Description: 代理链
+@author BEE 
+@date 2016-4-22 下午4:16:53
  */
 public class ProxyChain {
 
+	//目标类
     private final Class<?> targetClass;
+    //目标对象
     private final Object targetObject;
+    //目标方法
     private final Method targetMethod;
+    //代理方法
     private final MethodProxy methodProxy;
+    //代理方法参数
     private final Object[] methodParams;
 
     private List<Proxy> proxyList = new ArrayList<Proxy>();

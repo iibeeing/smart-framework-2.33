@@ -5,11 +5,12 @@ import java.util.Map;
 import org.smart4j.framework.core.bean.BaseBean;
 
 /**
- * 封装视图对象
- *
- * @author huangyong
- * @since 1.0
+@ClassName: View
+@Description: 封装视图对象
+@author BEE 
+@date 2016-4-21 下午2:33:00
  */
+@SuppressWarnings("serial")
 public class View extends BaseBean {
 
     private String path;              // 视图路径

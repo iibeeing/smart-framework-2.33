@@ -7,10 +7,10 @@ import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
 /**
- * 代理管理器
- *
- * @author huangyong
- * @since 2.0
+@ClassName: ProxyManager
+@Description: 代理管理器
+@author BEE 
+@date 2016-4-22 下午4:24:55
  */
 public class ProxyManager {
 

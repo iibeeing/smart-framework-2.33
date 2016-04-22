@@ -6,10 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 定义 Service 类
- *
- * @author huangyong
- * @since 1.0
+@ClassName: Service
+@Description: 定义 Service 类
+@author BEE 
+@date 2016-4-22 下午3:34:08
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

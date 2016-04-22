@@ -4,10 +4,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 视图解析器
- *
- * @author huangyong
- * @since 2.3
+@ClassName: ViewResolver
+@Description: 视图解析器
+@author BEE 
+@date 2016-4-21 下午2:32:12
  */
 public interface ViewResolver {
 

@@ -11,10 +11,10 @@ import org.smart4j.framework.util.ArrayUtil;
 import org.smart4j.framework.util.CollectionUtil;
 
 /**
- * 初始化 IOC 容器
- *
- * @author huangyong
- * @since 1.0
+@ClassName: IocHelper
+@Description: 初始化 IOC 容器
+@author BEE 
+@date 2016-4-22 下午3:35:07
  */
 public class IocHelper {
 
@@ -31,11 +31,15 @@ public class IocHelper {
                 if (ArrayUtil.isNotEmpty(beanFields)) {
                     // 遍历所有的 Bean 字段
                     for (Field beanField : beanFields) {
-                        // 判断当前 Bean 字段是否带有 Inject 注解
+                        // 判断当前 Bean 字段是否带有 Inject 注解  比如
+                    	//@Inject
+                    	//IUserService userService;
                         if (beanField.isAnnotationPresent(Inject.class)) {
                             // 获取 Bean 字段对应的接口
+                        	//IUserService
                             Class<?> interfaceClass = beanField.getType();
                             // 获取 Bean 字段对应的实现类
+                            //
                             Class<?> implementClass = findImplementClass(interfaceClass);
                             // 若存在实现类，则执行以下代码
                             if (implementClass != null) {
@@ -63,12 +67,16 @@ public class IocHelper {
      */
     public static Class<?> findImplementClass(Class<?> interfaceClass) {
         Class<?> implementClass = interfaceClass;
-        // 判断接口上是否标注了 Impl 注解
+        // 判断接口上是否标注了 Impl 注解 比如
+        //@Impl(CustomerServiceCacheAnnotationImpl.class)
+        //public interface CustomerService {...}
         if (interfaceClass.isAnnotationPresent(Impl.class)) {
             // 获取强制指定的实现类
+        	//CustomerServiceCacheAnnotationImpl
             implementClass = interfaceClass.getAnnotation(Impl.class).value();
         } else {
             // 获取该接口所有的实现类
+        	//	明显 这不是好方法，如果对于一个接口有多个实现类则可能会出问题，所以尽量用注解"Impl"来标识实现类
             List<Class<?>> implementClassList = ClassHelper.getClassListBySuper(interfaceClass);
             if (CollectionUtil.isNotEmpty(implementClassList)) {
                 // 获取第一个实现类

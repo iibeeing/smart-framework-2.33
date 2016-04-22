@@ -26,10 +26,10 @@ import org.smart4j.framework.util.CollectionUtil;
 import org.smart4j.framework.util.StringUtil;
 
 /**
- * 初始化 AOP 框架
- *
- * @author huangyong
- * @since 1.0
+@ClassName: AopHelper
+@Description: 初始化 AOP 框架
+@author BEE 
+@date 2016-4-22 下午4:16:04
  */
 public class AopHelper {
 

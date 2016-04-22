@@ -5,10 +5,10 @@ import java.util.List;
 import org.smart4j.framework.InstanceFactory;
 
 /**
- * 根据条件获取相关类
- *
- * @author huangyong
- * @since 1.0
+@ClassName: ClassHelper
+@Description: 根据条件获取相关类
+@author BEE 
+@date 2016-4-22 下午4:10:50
  */
 public class ClassHelper {
 

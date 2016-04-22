@@ -7,10 +7,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 定义切面类
- *
- * @author huangyong
- * @since 1.0
+@ClassName: Aspect
+@Description: 定义切面类
+@author BEE 
+@date 2016-4-22 下午3:34:30
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
