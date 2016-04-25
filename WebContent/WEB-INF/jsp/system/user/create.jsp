@@ -19,7 +19,8 @@
 </div>
 
 <div id="content">
-    <form id="user_create_form" class="css-form" method="post" action="${BASE}/user/create">
+    <%-- <form id="user_create_form" class="css-form" method="post" action="${BASE}/user/create"> --%>
+    <form id="user_create_form" class="css-form">
         <div class="css-form-header">
             <h3>创建用户</h3>
         </div>

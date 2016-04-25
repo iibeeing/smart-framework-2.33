@@ -3,6 +3,8 @@ package org.smart4j.sample.action;
 import java.util.List;
 import java.util.Map;
 
+import org.smart4j.framework.base.BaseAction;
+import org.smart4j.framework.dao.bean.Pager;
 import org.smart4j.framework.ioc.annotation.Inject;
 import org.smart4j.framework.mvc.DataContext;
 import org.smart4j.framework.mvc.annotation.Action;
@@ -10,11 +12,13 @@ import org.smart4j.framework.mvc.annotation.Request;
 import org.smart4j.framework.mvc.bean.Params;
 import org.smart4j.framework.mvc.bean.Result;
 import org.smart4j.framework.mvc.bean.View;
+import org.smart4j.framework.util.CastUtil;
+import org.smart4j.framework.util.WebUtil;
 import org.smart4j.sample.entity.User;
 import org.smart4j.sample.service.UserService;
 
 @Action
-public class UserAction {
+public class UserAction extends BaseAction{
 
     @Inject
     private UserService userService;
@@ -25,6 +29,23 @@ public class UserAction {
         DataContext.Request.put("userList", userList);
         return new View("system/user/list.jsp");
     }
+    
+/*    @Request.Get("/users")
+    public Result index() {
+        Pager<User> usersPager = userService.searchPager(1, 10, null);
+        return new Result(true).data(usersPager);
+    }*/
+    
+    @Request.Post("/user/search")
+  public Result search(Params params) {
+  	Map<String,Object> fieldMap = params.getFieldMap();
+      int pageNumber = CastUtil.castInt(fieldMap.get(PAGE_NUMBER));
+      int pageSize = CastUtil.castInt(fieldMap.get(PAGE_SIZE));
+      String queryString = CastUtil.castString(fieldMap.get(QUERY_STRING));
+      Map<String, String> queryMap = WebUtil.createQueryMap(queryString);
+      Pager<User> productBeanPager = userService.searchPager(pageNumber, pageSize, queryMap);
+      return new Result(true).data(productBeanPager);
+  }
 
     @Request.Get("/user/create")
     public View create() {

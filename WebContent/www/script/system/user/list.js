@@ -20,10 +20,10 @@
 
 $(function() {
     // 清空会话存储
-    window.sessionStorage.removeItem('product.id');
+    window.sessionStorage.removeItem('user.id');
 
     // 定义对象
-    var productTable = new ProductTable();
+    var userTable = new UserTable();
 
     // 查看
 /*    $(document).on('click', '.ext-product-view', function() {
@@ -61,22 +61,22 @@ $(function() {
     });
 
     // 查询
-    $('#product_search_form').submit(function() {
-        productTable.load(1);
+    $('#user_search_form').submit(function() {
+    	userTable.load(1);
         return false;
     });
 });
 
-var ProductTable = function() {
+var UserTable = function() {
     // 定义对象
-    var pager = new Pager('product_pager', this);
+    var pager = new Pager('user_pager', this);
     var renderer = new Renderer();
 
     // 初始化
     (function() {
         $.ajax({
             type: 'get',
-            url: BASE + '/product',
+            url: BASE + '/users',
             success: function(result) {
                 render(result);
             }
@@ -87,11 +87,11 @@ var ProductTable = function() {
     this.load = function(pageNumber) {
         $.ajax({
             type: 'post',
-            url: BASE + '/product/search',
+            url: BASE + '/user/search',
             data: {
                 'pageNumber': pageNumber,
-                'pageSize': $.trim($('#product_pager').find('.ext-pager-ps').val()),
-                'queryString': 'productName:' + $.trim($('#product_name').val())
+                'pageSize': $.trim($('#user_pager').find('.ext-pager-ps').val()),
+                'queryString': 'userName:' + $.trim($('#user_name').val())
             },
             success: function(result) {
                 render(result);
@@ -110,12 +110,12 @@ var ProductTable = function() {
 
     // 渲染表格
     var renderTable = function(data) {
-        var template = $('#product_table_template').html();
+        var template = $('#user_table_template').html();
         var tableHTML = '';
-        $.each(data.recordList, function(i, product) {
-            tableHTML += renderer.render(template, product);
+        $.each(data.recordList, function(i, user) {
+            tableHTML += renderer.render(template, user);
         });
-        $('#product_table').find('tbody').html(tableHTML);
+        $('#user_table').find('tbody').html(tableHTML);
     };
 
     // 渲染分页

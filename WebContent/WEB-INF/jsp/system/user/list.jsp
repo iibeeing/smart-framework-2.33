@@ -30,6 +30,24 @@
                 </div>
             </div>
             <div class="css-panel-content">
+            
+             	<div class="css-row">
+                    <div class="css-left">
+                        <form id="user_search_form">
+                            <div class="css-search">
+                                <input type="text" id="user_name" placeholder="用户名"/>
+                                <span class="css-search-button">
+                                    <button type="submit">搜索</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="css-right">
+                        <div id="user_pager"></div>
+                    </div>
+                </div>
+                
+            
                 <table id="customer_table" class="css-table">
                     <thead>
                         <tr>
@@ -56,6 +74,13 @@
                         </c:forEach>
                     </tbody>
                 </table>
+                
+<!--                 <div class="css-row">
+                    <div class="css-right">
+                        <div id="user_pager"></div>
+                    </div>
+                </div> -->
+                
             </div>
         </div>
     </div>
@@ -65,10 +90,19 @@
     <div id="copyright">Copyright @ 2016</div>
 </div>
 
+<script id="user_table_template" type="text/template">
+    <tr data-id="{user.id}" data-name="{user.username}">
+        <td><a href="#" class="ext-user-view">{user.username}</a></td>
+        <td>{user.username}</td>
+        <td>
+            <a href="#" class="ext-user-edit">Edit</a>
+            <a href="#" class="ext-user-delete">Delete</a>
+        </td>
+    </tr>
+</script>
 <script type="text/javascript" src="${BASE}/www/asset/lib/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="${BASE}/www/asset/lib/jquery-form/jquery.form.min.js"></script>
 <script type="text/javascript" src="${BASE}/www/asset/script/global.js"></script>
-<%-- <script type="text/javascript" src="${BASE}/www/script/customer.js"></script> --%>
 <script type="text/javascript" src="${BASE}/www/script/system/user/list.js"></script>
 
 </body>
