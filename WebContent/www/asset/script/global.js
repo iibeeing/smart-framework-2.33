@@ -30,7 +30,7 @@ var Pager = function(pagerId, $tableComponent) {
 
         // 更改每页条数
         var pageSizeInput = '#' + pagerId + ' .ext-pager-ps';
-        alert(pageSizeInput);
+        //alert(pageSizeInput);
         $(document)
             .on('click', pageSizeInput, function() {
                 $(this).select();

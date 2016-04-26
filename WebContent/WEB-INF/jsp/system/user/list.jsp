@@ -1,5 +1,6 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="p"%>
 <c:set var="BASE" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
@@ -80,7 +81,7 @@
                         <div id="user_pager"></div>
                     </div>
                 </div> -->
-                
+                <p:page formName="f1"></p:page>
             </div>
         </div>
     </div>
