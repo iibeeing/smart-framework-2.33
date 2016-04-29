@@ -1,18 +1,25 @@
 package org.smart4j.framework.util;
 
 public class Page {
-	//每页20行数据
-	public long pageNumber = 10;
-	//
-	public long recordCount = 0;
-	public long pageCount = 1;
-	public long pageNum = 1;
+	private int pageNumber = 15;// 每页显示数量
+	private int recordCount = 0;// 总记录显示
+	private int pageCount = 1;// 总页数
+	private int pageIndex = 1;// 当前页数编号
 	
-	public long getPageNumber() {
+
+	/**
+	 * 获取每页显示数量
+	 */
+	public int getPageNumber() {
 		return pageNumber;
 	}
 
-	public void setPageNumber(long pageNumber) {
+	/**
+	 * 设置每页显示数量
+	 * 
+	 * @param pageNumber
+	 */
+	public void setPageNumber(int pageNumber) {
 		try {
 			this.pageNumber = pageNumber;
 		} catch (Exception e) {
@@ -23,11 +30,11 @@ public class Page {
 		}
 	}
 
-	public long getRecordCount() {
+	public int getRecordCount() {
 		return recordCount;
 	}
 
-	public void setRecordCount(long recordCount) {
+	public void setRecordCount(int recordCount) {
 		this.recordCount = recordCount;
 		if (recordCount < 0) {
 			this.recordCount = 0;
@@ -35,27 +42,32 @@ public class Page {
 		this.pageCount = (this.recordCount + this.pageNumber -1)/this.pageNumber;
 	}
 
-	public long getPageCount() {
+	public int getPageCount() {
+//		this.pageCount = this.recordCount / this.pageNumber;
+//		if (this.recordCount % this.pageNumber != 0) {
+//			this.pageCount++;
+//		}
 		return this.pageCount;
 	}
 
-	public void setPageCount(long pageCount) {
+	public void setPageCount(int pageCount) {
 		this.pageCount = pageCount;
 		
 	}
 
-	public long getPageNum() {
-	   if (pageNum > pageCount) {
-		   pageNum = pageCount;
+	public int getPageIndex() {
+	   if (pageIndex > pageCount) {
+	      pageIndex = pageCount;
 	   }
-	   if (pageNum < 1) {
-	      this.pageNum = 1;
+	   if (pageIndex < 1) {
+	      this.pageIndex = 1;
 	   }
-		return pageNum;
+		
+		return pageIndex;
 	}
 
-	public void setPageNum(long pageNum) {
-		this.pageNum = pageNum;
+	public void setPageIndex(int pageIndex) {
+		this.pageIndex = pageIndex;
 	}
-	
+
 }

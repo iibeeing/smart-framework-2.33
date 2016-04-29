@@ -9,6 +9,7 @@ import org.smart4j.framework.orm.DataSet;
 import org.smart4j.framework.tx.annotation.Service;
 import org.smart4j.framework.tx.annotation.Transaction;
 import org.smart4j.framework.util.MapUtil;
+import org.smart4j.framework.util.Page;
 import org.smart4j.framework.util.StringUtil;
 import org.smart4j.sample.entity.User;
 import org.smart4j.sample.service.UserService;
@@ -64,4 +65,15 @@ public class UserServiceImpl implements UserService {
         return new Pager<User>(pageNumber, pageSize, totalRecord, userList);
 	}
 
+	@Override
+	public List<User> firstPager(Page page) {
+		Pager<User> pager = this.searchPager(1, 10, null);
+		if(pager != null){
+			page.setRecordCount(pager.getTotalRecord());
+			page.setPageCount(pager.getTotalPage());
+			return pager.getRecordList();
+		}else{
+			return null;
+		}
+	}
 }

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.smart4j.framework.dao.bean.Pager;
+import org.smart4j.framework.util.Page;
 import org.smart4j.sample.entity.ProductBean;
 import org.smart4j.sample.entity.User;
 
@@ -19,4 +20,6 @@ public interface UserService {
     boolean deleteUser(long id);
 
     Pager<User> searchPager(int pageNumber, int pageSize, Map<String, String> formFieldMap);
+    
+    List<User> firstPager(Page page);
 }

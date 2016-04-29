@@ -82,6 +82,18 @@
                     </div>
                 </div> -->
                 <p:page formName="f1"></p:page>
+                
+			       <%--  <div class="panelBar">
+					<div class="pages">
+						<span>显示</span>
+						<select class="combox"  name="numPerPage" >
+							<option value="10">10</option>
+						</select>
+						<span>条，共${page.recordCount}条</span>
+					</div>
+					<div class="pagination" targetType="navTab" totalCount="${page.recordCount}" numPerPage="${page.pageNumber}" pageNumShown="10" currentPage="${page.pageNum}"></div>
+				</div> --%>
+	
             </div>
         </div>
     </div>

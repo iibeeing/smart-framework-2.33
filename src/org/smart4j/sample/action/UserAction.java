@@ -13,6 +13,7 @@ import org.smart4j.framework.mvc.bean.Params;
 import org.smart4j.framework.mvc.bean.Result;
 import org.smart4j.framework.mvc.bean.View;
 import org.smart4j.framework.util.CastUtil;
+import org.smart4j.framework.util.Page;
 import org.smart4j.framework.util.WebUtil;
 import org.smart4j.sample.entity.User;
 import org.smart4j.sample.service.UserService;
@@ -20,15 +21,32 @@ import org.smart4j.sample.service.UserService;
 @Action
 public class UserAction extends BaseAction{
 
+	// 分页对象
+	protected Page page;
+	
     @Inject
     private UserService userService;
 
     @Request.Get("/users")
     public View index() {
+        //List<User> userList = userService.firstPager(page);
+    	List<User> userList = userService.findUserList();
+        DataContext.Request.put("userList", userList);
+        //DataContext.Request.put("page", page);
+        return new View("system/user/list.jsp");
+    }
+    
+    @Request.Get("/searchusers")
+    public View index(Params params) {
+    	Map<String,Object> fieldMap = params.getFieldMap();
+    	int pageNum = CastUtil.castInt(fieldMap.get("pageNum"));
+//    	page.setPageNum(Integer.valueOf(pageNum));
+    	
         List<User> userList = userService.findUserList();
         DataContext.Request.put("userList", userList);
         return new View("system/user/list.jsp");
     }
+    
     
 /*    @Request.Get("/users")
     public Result index() {
@@ -36,7 +54,7 @@ public class UserAction extends BaseAction{
         return new Result(true).data(usersPager);
     }*/
     
-    @Request.Post("/user/search")
+/*    @Request.Post("/user/search")
   public Result search(Params params) {
   	Map<String,Object> fieldMap = params.getFieldMap();
       int pageNumber = CastUtil.castInt(fieldMap.get(PAGE_NUMBER));
@@ -45,7 +63,7 @@ public class UserAction extends BaseAction{
       Map<String, String> queryMap = WebUtil.createQueryMap(queryString);
       Pager<User> productBeanPager = userService.searchPager(pageNumber, pageSize, queryMap);
       return new Result(true).data(productBeanPager);
-  }
+  }*/
 
     @Request.Get("/user/create")
     public View create() {
@@ -78,4 +96,13 @@ public class UserAction extends BaseAction{
         boolean result = userService.deleteUser(id);
         return new Result(result);
     }
+
+	public Page getPage() {
+		return page;
+	}
+
+	public void setPage(Page page) {
+		this.page = page;
+	}
+    
 }
